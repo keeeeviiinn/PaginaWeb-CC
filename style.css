@@ -1,0 +1,552 @@
+*{ /* artedisco es para estilar todos los elementos que hay en la estructura*/
+	box-sizing: border-box; /* si no se agrega a todos los elementos, no se le puede dar un tamaño especifico al elemento o un bloque por ejemplo, se respeta los bordes y no crece*/
+}
+
+body /*se le da la fuente al cuerpo*/
+{
+	font-family: "Roboto";
+	font-size: 13px;
+}
+
+a /* se stila todos los elementos que esten con hipervinculos*/
+{
+	display: inline-block; /*es para poder colocar los elementos uno al lado del otro respetando el alto que le demos al elemento*/
+	text-decoration: none; /*le quita todas las subrayas a los links*/
+}
+
+p /*color negro a los textos de los parrafos */
+{
+	color: black;
+}
+
+header /*toda la cabecera */
+{
+	
+	padding: 15px 0; /*agranda margen hacia adentro*/
+	position: fixed; /*posicion fija, el elemento sigue al momento de bajar por la pagina*/
+	top: 0; /* se debe dar las propiedades de los lados, arriba siempre sin margen pegado a la orilla*/
+	width: 100%; /*debe usar el 100% de ancho o si no estara junto al menu se vera raro*/
+	left: 0; /*debe estar pegado a la izq*/
+	z-index: 2; /*z index es como una capa, ayuda a que el header se coloque encima de todo el inicio por donde se pasa, por defecto inicio tiene valor 1, asi el header queda encima de lo que se vea*/
+	background-color: white; /*se le agrega un color de fondo al header para que se aprecie mejor*/
+	
+	/*margin-bottom: 15px; /* se agrabda margen abajo de la cabecera */
+	/*margin-top: 15px; /*margen arriba */ /*estos son agrandar margen hacia afuera*/
+	/*background-color: black; /* color de fondo a la parte de la cabecera*/
+}
+
+header .container /*se selecciona al container que esta dentro del header de la estructura html*/ /*esto se  hace porque como esta dividido en bloques, si se coloca por ejemplo dos imagenes o logos en este caso
+no se pueden colocar perfectamente como deseemos una al lado del otro ya que en bloqes toma el tamaño de la 
+pantalla por completo*/
+{
+	display: flex; /*display cambia el comportamiento de un elemento, inline-block hace que los elementos se coloquen uno al lado del otro pero 
+	respetando el alto  que yo le coloque. Si es solo inline, solo coloca los elementos uno al lado del otro sin pescar el alto que le coloquemos. FLEX aprovecha
+	el espacio que hay para acomodar a sus hijos (<a> y <nav>)*/
+
+	justify-content: space-between; /* propiedad q trabaja en base al eje x los alinea los elementos. Space-betwen hace q se acomoden con el mismo espacio entre medio*/
+	align-items: center; /*ajusta en el eje y para centrarlo*/
+	
+}
+
+header .container .logo /* de esta forma puedo editar la imagen de logo que esta dentro del container en el header*/
+{
+	width: 100px;
+}
+
+header .container nav a /*toos los elementos a hipervinculos dentro de container en el header (este caso seria inicio, contacto, nosotros, etc) */
+{
+	color: red; /*coloca en color rojo las palabras*/
+	text-decoration: none; /*quita la linea de abajo de los hipervinculos, si se quisiera colocar, en ves de none seria underline*/
+	margin: 0 15px; /*darle mas espacio a los lados margin es hacia afuera de los hipervinculos 0 arriba y abajo, 15 izq y der. podria ser 0 15 0 15*/
+}
+
+header .container .hamnb
+	{
+		display: none; /*simbolo hamburguesa, que se vea como blouqe, solo se ve en movil, acca esta en none*/
+	}
+
+footer
+{
+	background-color: black;
+	color: white;
+	padding-top: 60px; /*es para que se pegue abajo el pie de pagina*/
+}
+
+footer .barra-footer /*barra final donde dice derechos reservados*/
+{
+	background-color: grey;
+	text-align: center;
+	padding-right:15px ;
+	padding-left: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+footer .logo-footer/*logo de coca cola en el pie de pagina*/
+{
+	width: 100%;
+}
+
+footer p /*texto denajo del logo del pie de pagina*/
+{
+	color: white;
+	margin-bottom: 30px;
+}
+
+footer a /*linnks denajo del logo del pie de pagina*/
+{
+	color: white;
+}
+
+
+
+footer ul
+{
+	padding-left: 0; /*por defecto todas las etiquetas ul tienen que tener un padding-left*/
+	list-style: none; /*le quita los puntos al listado*/
+	margin: 0;
+}
+
+footer ul li /*son los listados*/
+{
+	margin-bottom: 10px;
+}
+
+footer .redes
+{
+	font-size: 30px;
+	display: flex; /*coloca a los iconos unos al lado del otro*/
+}
+
+footer .redes a
+{
+	margin: 0 7.5px; /*los margenes entre los 3 sumaria 15px*/
+
+}
+
+.boton /*stilo de las clases general de boton*/
+{
+	text-align: center; /*centrar el texto dentro de los botones*/
+	text-decoration: none; /*quitar la linea debajo*/
+	padding: 15px 30px; /*arriba y abajo - lados*/
+	border: none;
+}
+
+.boton.boton-rojo /*se escribe asi cuando una clase esta dentro de otra clase juntos*/
+{
+	color: white;
+	background-color: red;
+	font-size: 20px;
+	font-weight: bold; /*font weight es la profundidad, bold es darle profundiad de funte a negrita*/
+}
+
+.boton.boton-blanco /*se escribe asi cuando una clase esta dentro de otra clase juntos*/
+{
+	color: red;
+	background-color: white;
+	font-size: 16px;
+	font-weight: bold; /*font weight es la profundidad, bold es darle profundiad de funte a negrita*/
+	border: 1px solid red; /*se le da un borde solido y de color rojo al boton*/
+}
+
+.boton.boton-negro /*se escribe asi cuando una clase esta dentro de otra clase juntos, es el boton enviar del formulario*/
+{
+	color: white;
+	background-color: black;
+	font-size: 20px;
+	font-weight: bold; /*font weight es la profundidad, bold es darle profundiad de funte a negrita*/
+}
+
+.boton.boton-negro:hover/*al colocar el mouse encima del boton enviar cambiara los colores*/
+{
+	color: black;
+	background-color: white;
+}
+
+.seccion /*clase para estialr la seccion id nosotros y servicio me refiero al bloque completo*/
+{
+	padding-top: 60px; /*agranda margen hacia adentro para arriba*/
+	padding-bottom: 60px; /*agranda margen hacia adentro para abajo*/
+}
+
+.cuadrado-perfecto /*se crea esta clase para que cualquier foto que se ingrese tome el espacio necesario de una columna*/
+{
+	width: 100%; 
+	padding-bottom: 100%; /*se genera un alto interno para que al escribir en esa clase no sobrepase de este modo la imagen no ocupa un espacio es absoluta, haciendo esto queda un espacio vacio, hayq  hacer q la imagen este encima de ese espacio*/
+	position: relative; /*relativo, ocupa un lugar en el espacio asi la imagen estara por encima*/
+}
+
+.cuadrado-perfecto img /*se crea esta clase para que cualquier foto que se ingrese tome el espacio necesario de una columna*/
+{
+	width: 100%; 
+	height: 100%; /*ahora se puede usar el alto al 100% ya que el padding del cuadrado perfecto le da un alto, y se genera la imagen en un cuadrado*/
+	object-fit: cover; /*es una etiqueta solo para imagenes, cover es para usar todo el espacio al rededor*/
+	object-position: center;
+	position: absolute; /*se hace absoluta para que no ocupe un espacio y quede encima del bloquue (alto) que dio el paddin)*/
+	top: 0;
+	left: 0; /*siempre se le coloca estos atributos para que este pegado a la orilla del bloque*/
+}
+
+
+.container
+{
+	width: 1140px; /*todos los elementos con clase container tendran este ancho */
+	margin: 0 auto 0 auto; /* arriba y abajo el margen sea 0px, y que el margen izq y der sean automaticos arriba es top abajo es buttom. o puede ser 0 auto 0 auto en zona horaria arriba der abajo izq*/
+	padding-right: 15px;
+	padding-left: 15px;
+	position: relative; /*se hace relativo, fijo para que las demas cosas se puedan colocar encima suyo*/
+}
+
+.container-fluid /*clase del bloque esta en galeria con las fotos*/
+{
+	width: 100%; /*todos los elementos con clase container tendran este ancho */
+	padding-right: 15px;
+	padding-left: 15px;
+	position: relative; /*se hace relativo, fijo para que las demas cosas se puedan colocar encima suyo*/
+}
+
+
+.row /*a todos los  clase row*/
+{
+	display: flex; /*acomoda el espacio pensando en los hijos (columnas dentro del row)*/
+	flex-wrap: wrap; /*si una columna por su ancho no entra en el row, provoca que se vaya hacia abajo el wrap, si fuera nowrap, si por tamaño no quepa,  quedaria igua*/
+	margin-left: -15px; /*le resta a los row para que al verlo desde celular no se vean los margen pegados a las orillas*/
+	margin-right: -15px;
+}
+
+.columna
+{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.columna-25 /*las columnas de la seccion contacto, son 4 columnas, del 100% se dividen en 4*/
+{
+	width: 25%;
+}
+
+.columna-33 /*todas las clases con nombre columna33*/
+{
+	width: 33.33%; /*es en porcentaje porque si se ve del celular, al colocarlo en pixeles no se sabe la cantidad que tiene cada dispositivo, por eso se coloca en porcentaje, y como son 3 columnas el 100% entre 3 es ese valor*/
+
+}
+
+.columna-50
+{
+	width: 50%;
+}
+
+.columna-41
+{
+	width: 41.66%;/*esto es por la grilla de 12 columnas*/
+}
+
+.empujar-50
+{
+	margin-left: 50%;
+
+}
+
+.empujar-58
+{
+	margin-left: 58.33%; /*esto es por la grilla de 12 columnas*/
+
+}
+
+.empujar-66
+{
+	margin-left: 66.66%; /*esto es por la grilla de 12 columnas*/
+
+}
+
+.empujar-0 /*esto es por si no quiero que empuje la imagen o en este caso el formulario*/
+{
+	margin-left: 0;
+}
+
+
+#inicio
+{
+	position: relative; /*todos los elementos por defecto tienen estatica la position, relativa*/ 
+}
+
+#inicio img /*se stilara la imagen dentro del id inicio */
+{
+	width: 100%; 
+	display: block; /*los elementos inline generan un espacio hacia los lados, por eso se le declara como bloque para que no lo tome. solo el tamaño de la pantalla */
+}
+
+
+#inicio .bloque-inicio /*se stilara todo el bloque dentro del id */
+{
+	position: absolute; /*al hacerlo absoluto podremos posicionarlo enciam del logo en el id inicio y borrando el espacio que ocupaba, lo usara otro elemento*/
+	top: 40%; /* se centrara en base desde arriba a la mitad de la pantalla de la posicion relativa*/
+	left: 35%; /*se mueve a la derecha dejando 40% de espach a la izq*/
+	width: 40%;
+	text-align: center; /*centra todos los elementos de textos y cualquier elemento inline o sea el <a>*/
+	margin-left: -40px; /*se mueve 20 a la izq, solo margen se puede colocar en negativo*/
+}
+
+#inicio .bloque-inicio h1 /*cambio de color y fuente al titulo encima del logo principal*/
+{
+	color: white;
+	font-size: 35px;
+}
+
+#inicio .bloque-inicio p /*la descripcion debajo del titulo*/
+{
+	color: white;
+	font-size: 16px;
+}
+
+#nosotros
+{
+	background-image: url(img/latas.jpg); /*backgraund image coloca una imagen de fondo en el bloque nosotros*/
+	
+}
+
+#nosotros p /*como arriba se configuro q todos los p son letra negra, en el id nosotros no cambia a blanco, este es para hacerlo especifico*/
+{
+	color: white; /*fuente de color blanca el texto*/
+	background-size: cover; /*utiliza todo el espacio que tenga a su alrededor la foto con cover*/
+	text-align: center; /*alinia al centro el texto*/
+	font-size: 16px;
+}
+
+
+#servicios .bloque-servicio
+{
+	border: 1px solid grey; /*tamaño, tipo y color de borde de los bloques que conforman servicios*/
+}
+
+
+#servicios .bloque-servicio .bloque-img-servicio /* el bloqye d las imagenes dentro de los bloques en servicios*/
+{
+
+}
+
+#servicios .bloque-servicio .bloque-img-servicio img/* las imagenes dentro de los bloques en servicios*/
+{
+	width: 100%;
+}
+
+#servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto
+{
+	padding-bottom: 56.25%; /*se le da un espacio de 16: 9. Esto es para que el recuadro de la imagen se vea en rectangulo*/
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio
+{
+	padding: 15px; /* a todos los lados*/
+}
+
+
+#servicios .bloque-servicio .bloque-contenido-servicio h3
+{
+	margin-top: 0px; /*sin margen arriba*/
+	font-size: 25px;
+}
+
+
+#galeria
+{
+
+}
+
+#galeria h4
+{
+	padding-right: 15px; /*se le da un ancho a los lados por si el texto crece, que no se pegue a los lados*/
+	padding-left: 15px;
+	text-align: center; /*se coloque en el centro de la imagen*/
+	position: absolute; /*esto es para que el texto este encima, no ocupe un espacio, el padre es cuadrado perfecto y tiene q tener una posicion relativa*/
+	top: 40%;
+	color: white;
+	font-size: 18px;
+	width: 100%; /*tiene q tomar el 100% para poder verse centrado*/
+
+}
+
+#galeria img
+{
+	filter: grayscale(1); /*se le da un filtro gris a la imagen va entre 0 a 1*/
+}
+
+#galeria .cuadrado-perfecto:hover img /* con hover, esto es para darle una interfaz al colocar el mouse en el cuadrado perfecto que es donde esta la imagen */
+{
+	filter: grayscale(0); /*cuando se coloqe el raton encima del cuadrado, se quita el filtro y se ve normal*/
+}
+
+#galeria .cuadrado-perfecto:hover h4 /* con hover, esto es para darle una interfaz al colocar el mouse en el cuadrado perfecto que es donde esta el texto o*/
+{
+	display: none; /*se oculta el texto de la imagen al pasar el mouse encima*/
+}
+
+#contacto
+{
+	position: relative; /*relativa para colocarla fija y asi lo demas encima*/
+}
+
+#contacto iframe
+{
+	position: absolute; /*relativa para colocarla fija y asi lo demas encima*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%; /*el alto se lo da el formulario, ahi se toma todo ese espacio*/
+	filter: grayscale(1);
+}
+
+#contacto form /*formulario*/
+{
+	padding: 60px; /*agrandar a todos los lados*/
+	background-color: red;
+
+}
+
+#contacto form .form-block /*bloque dentro del formulario*/
+{
+	width: 100%; /*tome todo el ancho*/
+	margin-bottom: 15px; /*separa los espacios entre cada bloque donde se puede ingresar texto*/
+
+}
+
+
+#contacto form .form-block .form-control /*bloque donde esta para ingresar valores en el formulario*/
+{
+	display: block; /*por defecto son inline, se cambia a bloque*/
+	height: 40px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+#contacto form .form-block textarea /*es el texto que esta en el bloque de mensaje*/
+{
+	display: block; /*por defecto son inline, se cambia a bloque*/
+	height: 100px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+#contacto form .form-block.bloque-ultimo /*cuandoe sta junto es porque tiene ambas clases*/
+{
+	margin-bottom: 0;
+}
+
+
+@media(max-width: 767px) /*es una regla que permite hasta maximo 767px (tamaño maximo de un celular), lo que este dentro solo funciona para un dispositivo max eso*/
+{
+	body
+	{
+		font-size: 15px;
+	}	
+
+	header .container nav 
+	{
+		position: fixed; /*posicion fija*/
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		padding-right: 15px;
+		padding-left: 15px;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column; /*por defecto el flex direction esta como row como fila, se convierte en columna para q los elementos esten encima del otro*/
+		transition: all 0.4s ease; /*(ease es un tipo de transisicon. Cualquier elemento que tenga un cambio por tanto segundos para q sea lento) cambio de un estado a otro no brusco ej, cambiar un color de boton con el mause encima, es mas suave con transition*/
+		transform: translateX(100%); /*transformacion , translada al elemento fuera de la parte visible en base al eje x fuera del viewport, esto ayuda a que se vea todo*/	
+	}
+
+
+
+	header .container nav a
+	{
+		font-size: 30px;
+		margin: 15px 0;
+	}
+
+	header .container .hamb
+	{
+		display: block; /*simbolo hamburguesa, que se vea como blouqe, solo se ve en movil*/
+		font-size:40px;
+		color: red;
+	}
+
+	form .boton.boton-negro
+	{
+		width: 100%;
+	}
+
+	footer
+	{
+		text-align: center;
+	}
+
+	footer .logo-footer
+	{
+		width: 50%;
+	}
+
+	footer .redes
+	{
+		justify-content: center; /*centra los logos de redes al verlo en mobile*/
+	}
+
+	.container
+	{
+		width: 100%; /*se debe colocar de nuevo el ancho maximo y en porcentaje porque no sabemos el tamaño exacto del telefono*/
+	}
+
+	.columna-mobile-100 /*columna de nsotros son 3*/
+	{
+		width: 100%;
+	}
+
+	.columna-mobile-50 /*columna de nsotros son 3*/
+	{
+		width: 50%;
+	}
+
+	.empujar-mobile-0
+	{
+		margin-left: 0; /*pegado a la orilla izquierda el formulario*/
+	}
+
+	.sinpadding-mobile
+	{
+		padding: 0; /*para q el formulario este al 100% sin espacio*/
+	}
+
+	#inicio
+	{
+		height: 100vh; /*alto fijo del dispositivo movil por eso es en vh*/
+	}
+
+	#inicio img
+	{
+		height: 100%; /*cubre el 100%*/
+		object-fit: cover; /*cubre todo el bloque*/
+		object-position: center; /*ubica al centro*/
+	}
+
+	#servicios .bloque-servicio
+	{
+		margin-bottom: 15px;
+	}
+
+	#contacto
+	{
+		padding: 0; /*no tenga espacio ni arriba ni abajo*/
+	}
+
+	#contacto iframe
+	{
+		position: relative;
+		height: 50vh;
+	}
+}

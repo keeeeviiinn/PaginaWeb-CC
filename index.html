@@ -1,0 +1,232 @@
+<!DOCTYPE html> <!--que tipo de documento es-->
+<html>
+	<head> <!-- va toda la informacion de la web-->
+		<meta charset="utf-8"> <!-- tipo de codificacion con utf-8 permite ñ o tildes aparecen normal-->
+		<meta name = "description" content="Coca cola es la bebida negra que venden en chile y en todo el mundo"> <!-- resumen de 130 caracteres de lo que trata la web (al buscar una pagina en internet debajo del enlace para entrar sale la descripcion)-->
+		<meta name="keywords" content="coca, cola, bebida, gaseosa"> <!-- palabras claves al buscar en internet-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--se saca de view port html, es uno de los que permite visualizar en celular-->
+		<!-- TITTLE Aparece en la pestaña de busqueda-->
+			<title> 
+				Inicio - Coca Cola 
+			</title>
+			<link rel="shortcut icon"  href="img/favicon.png"> <!-- icono en la pestaña de busqueda-->
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> <!-- esta linea de codigo se obtiene de Google fonts y se eligen las fuentes que mas nos guste, se debe pegar antes que normalize.cc-->
+			<link rel="stylesheet"  href="css/normalize.css"> <!-- normalize es para que el estilo que se le de a esta web se vea igual en todos los navegadores siempre debe estar arriba del vinculo a stilo de css-->
+			<link rel="stylesheet"  href="style.css"> <!-- linkea la hoja de estilo para ser utilzada dentro del documento href sirve algo externo o interno-->
+			<script src="https://kit.fontawesome.com/6c75250cff.js" crossorigin="anonymous"></script> <!-- linea de codigo para logos de FONT AWESOME, se pega despues de linkear style.css -->
+	
+	</head>
+	<body> <!--parte visual de la web, se dividira en 3 partes el cuerpo-->
+		<header><!--cabecera del cuerpo, el header o footer tambien pueden estar dentro de otras etiquetas, no necesariamente en el body -->
+			<div class="container"><!--etiqueta que divide en bloques la web, abarca de izq a dere, y de alto depende del contenido. CONTAINER es una etiqueta de css, se puede usar en varias partes de la web-->
+				<a href="index.html"><!--a sirve para crear enlazes, hipervinculos -->
+					<img src="img/logo.svg" class="logo"> <!-- al apretar imagen o palabra pudiera ser lleva a un vinvulo-->
+					
+				</a> 
+				<nav> <!-- etiqueta de bloques relacionado a enlaces de navegacion-->
+					<a href="#inicio"> Inicio</a> <!-- #inicio hace referencia a una seccion como ID inicio-->
+					<a href="#nosotros"> Nosotros</a>
+					<a href="#servicios"> Servicios</a>
+					<a href="#galeria"> Galería</a>
+					<a href="#contacto"> Contacto</a>	
+				</nav>
+				<a href="#" class="hamb"><i class="fas fa-bars"></i></a> <!--icono hamburguesa, solo se vera en dispositivo movil-->
+			</div>
+		</header>
+		<main> <!-- el cuerpo en si, se crean las secciones-->
+			<section id="inicio">  <!-- al dar click a la palbra Inicio, lo llevara a esta seccion-->
+				<img src="img/bannerprincipal.jpg"> <!-- logo o banner en la parte principal de la cabecera-->
+				<div class="bloque-inicio"> <!-- etiqueta para colocar el titulo principal en un bloque en la parte de arriba-->
+					<h1> Bienvenidos a Coca Cola</h1><!-- etiqueta de titulo de tamaño de string en la web, es el mas grande-->
+					<p> <!--etiqueta para escribir un parrafo dentro del bloque con el titulo-->
+						Esta es una pagina de Coca Cola creada por Kevin García.
+					</p> 
+					<a href="#nosotros" class="boton boton-rojo">Ver más</a> <!-- crea un boton de ver mas para llevar a nosotros. Dentro de la clase boton se crea una clase boton rojo para poder diferenciar-->	
+				</div>
+			</section>
+			<section id="nosotros" class="seccion"> <!-- se crea clase seccion para estilarlo-->
+				<div class="container"> <!--dividira en bloques la seccion de nosotros-->
+					<p>Esta es una pagina de Coca Cola creada por Kevin García para probar
+					las funcionalidades del sistema.</p>
+					
+				</div>
+			</section>
+			<section id="servicios" class="seccion"> <!-- se crea clase seccion para estilarlo-->
+				<div class="container"> <!--division de bloques mayor dentro de servicios-->
+					<div class="row"> <!-- division media con clase de rejillas resta 15 pixeles a los lados -->
+						<div class="columna columna-33 columna-mobile-100"> <!-- esta division representa el 33% del ancho del container, se crea una columna principal-->
+							<div class="bloque-servicio"> <!-- contiene imagen y texto AQUI COMIENZA EL BLOQUE DE LA COLUMNA 33-->
+								<div class="bloque-img-servicio cuadrado-perfecto"> <!-- la clase puede ser cualquier nombre-->
+									<img src="img/servicio1.jpg">
+								</div>
+								<div class="bloque-contenido-servicio">
+									<h3>Servicio 1</h3><!--etiqueta de titulo menor a la h1-->
+									<p>El servicio 1 entrega nuevas bebidas elegidas por Kevin García</p>
+									<a href="#" class="boton boton-blanco">Ver más</a> <!-- si solo tiene el gato es porque aun no se que etiqeta vincular-->
+								</div>
+							</div> <!-- AQUI TERMINA BLOQYE COLUMNA 33-->
+						</div>
+						<div class="columna columna-33 columna-mobile-100"> <!-- esta division representa el 33% del ancho del container-->
+							<div class="bloque-servicio"> <!-- contiene imagen y texto-->
+								<div class="bloque-img-servicio cuadrado-perfecto"> <!-- la clase puede ser cualquier nombre-->
+									<img src="img/servicio2.jpg">
+								</div>
+								<div class="bloque-contenido-servicio">
+									<h3>Servicio 2</h3><!--etiqueta de titulo menor a la h1-->
+									<p>El servicio 1 entrega nuevas bebidas elegidas por Kevin García</p>
+									<a href="#" class="boton boton-blanco">Ver más</a> <!-- si solo tiene el gato es porque aun no se que etiqeta vincular-->
+								</div>
+							</div>
+						</div>
+						<div class="columna columna-33 columna-mobile-100"> <!-- esta division representa el 33% del ancho del container-->
+							<div class="bloque-servicio"> <!-- contiene imagen y texto-->
+								<div class="bloque-img-servicio cuadrado-perfecto"> <!-- la clase puede ser cualquier nombre-->
+									<img src="img/servicio3.jpg">
+								</div>
+								<div class="bloque-contenido-servicio">
+									<h3>Servicio 3</h3><!--etiqueta de titulo menor a la h1-->
+									<p>El servicio 3 entrega nuevas bebidas elegidas por Kevin García</p>
+									<a href="#" class="boton boton-blanco">Ver más</a> <!-- si solo tiene el gato es porque aun no se que etiqeta vincular-->
+								</div>
+							</div>
+						</div>	
+						
+					</div>
+				</div>
+			</section>
+			<section id="galeria"> <!--SERVICIO GALERIA PRINCIPAL, TENDRA 6 BLOQUES CON IMAGENES-->
+				<div class="container-fluid"> <!-- el container fluid abarca todo el ancho de la pantalla el 100%-->
+					<div class="row">
+						<div class="columna-33 columna-mobile-50"> <!-- la columna 50 solo se vera en mobile-->
+							<div class="cuadrado-perfecto"> <!--forma un cuadrado perfecto dentro de las columnas-->
+								<img src="img/servicio1.jpg"> <!-- se coloca la imagen en el cuadrado perfecto-->
+								<h4>Imagen 1</h4>
+							</div>
+						</div>
+						<div class="columna-33  columna-mobile-50">
+							<div class="cuadrado-perfecto"> <!-- forma un cuadrado perfecto dentro de las columnas-->
+								<img src="img/servicio2.jpg"> <!-- se coloca la imagen en el cuadrado perfecto-->
+								<h4>Imagen 2</h4>
+							</div>
+						</div>
+						<div class="columna-33 columna-mobile-50">
+							<div class="cuadrado-perfecto"> <!-- forma un cuadrado perfecto dentro de las columnas-->
+								<img src="img/servicio3.jpg"> <!-- se coloca la imagen en el cuadrado perfecto-->
+								<h4>Imagen 3</h4>
+							</div>
+						</div>
+						<div class="columna-33  columna-mobile-50">
+							<div class="cuadrado-perfecto"> <!-- forma un cuadrado perfecto dentro de las columnas-->
+								<img src="img/servicio1.jpg"> <!-- se coloca la imagen en el cuadrado perfecto-->
+								<h4>Imagen 4</h4>
+							</div>
+						</div>
+						<div class="columna-33  columna-mobile-50">
+							<div class="cuadrado-perfecto"> <!-- forma un cuadrado perfecto dentro de las columnas-->
+								<img src="img/servicio2.jpg"> <!-- se coloca la imagen en el cuadrado perfecto-->
+								<h4>Imagen 5</h4>
+							</div>
+						</div>
+						<div class="columna-33  columna-mobile-50">
+							<div class="cuadrado-perfecto"> <!-- forma un cuadrado perfecto dentro de las columnas-->
+								<img src="img/servicio3.jpg"> <!-- se coloca la imagen en el cuadrado perfecto-->
+								<h4>Imagen 6</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="contacto" class="seccion">
+				<iframe width="520" height="400" frameborder="0"  id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=caleta%20arrayan%201106%20santiago+(chile)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <!-- iframe es para colocar un sitio externo una web externa, en este caso es google maps con mi direccion, se obtiene desde google maps generator, al colocarlo encima del container se le dara visualmente colocarlo de fondo en contacto-->
+				<div class="container-fluid"> <!--container-fluid para hacer que tome mas espacio, las especificacioes estan en css-->
+					<div class="row">
+						<div class="columna columna-41  columna-mobile-100 empujar-58 empujar-mobile-0 sinpadding-mobile"> <!--columna al 50%, ahora al 41, clase empujar es para darle un margen izq de 50% ahora al 68al estilar, los mobiles son clases que hara q se vea asi solo con celular-->
+							<form action="" method="post"> <!-- es para generar un formulario action es el archivo al que llegaran todos los datos que se ingresen en el formulario. POST deja que los archivos vayan a donde se ingresen normalmente, pero si se coloca GET, esos valores que se ingresen apareceran en la URL.-->
+								<div class="form-block"> <!-- -->
+									<input type="text" name="nombre" class="form-control" placeholder="Nombre"> <!-- input tiene dos atributos tipo puede ser texto y el name es importante y se obtiene la info que viaja alaction atraves del name (se le puede colocar cualquier nombre). siempre tiene que estar el name o si no no funciona. PLACEHOLDER ES PARA COLOCAR UN TEXTO PREDETERMINADO ANTES DE ESCRIBIR EN EL RECUADRO-->
+								</div>
+								<div class="form-block"> <!-- -->
+									<input type="email" name="email" class="form-control" placeholder="Email"> <!-- input tiene dos atributos tipo puede ser texto y el name es importante y se obtiene la info que viaja alaction atraves del name (se le puede colocar cualquier nombre). siempre tiene que estar el name o si no no funciona-->
+								</div>
+								<div class="form-block">
+									<textarea name="mensaje"  placeholder="Mensaje"></textarea> <!-- area de texto--> 
+								</div>
+								<div class="form-block bloque-ultimo">
+									<input type="submit" class="boton boton-negro" value="Enviar"> <!-- se crea boton para enviar los datos ingresados en contacto y  mandarlos al action-->
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main> <!-- -->
+		<footer> <!-- pie de pagina, clase seccion-->
+			<div class="container">
+				<div class="row">
+					<div class="columna columna-25 columna-mobile-100"> <!-- como seran 4 bloques cada uno ocupa el 25% del espacio-->
+						<img src="img/logo-blanco.png" class="logo-footer">
+						<p>Nuestro gran logo de Coca-Cola año 2021.</p>
+					</div>
+					<div class="columna columna-25 columna-mobile-100"> <!-- como seran 4 bloques cada uno ocupa el 25% del espacio-->
+						<h3> <!-- en el otro bloque se mostrara temas relacionados y una lista debajo-->
+							Temas Relacionados
+						</h3>
+						<ul> <!-- lista-->
+							<li><!-- hay que escribir li para poder generar los puntitos o guin de las listas-->
+								<a href="#">Tema 1</a>
+							</li>
+							<li><!-- hay que escribir li para poder generar los puntitos o guin de las listas-->
+								<a href="#">Tema 2</a>
+							</li>
+							<li><!-- hay que escribir li para poder generar los puntitos o guin de las listas-->
+								<a href="#">Tema 3</a>
+							</li>
+						</ul>
+					</div>
+					<div class="columna columna-25 columna-mobile-100"> <!-- como seran 4 bloques cada uno ocupa el 25% del espacio-->
+						<h3> <!-- en el otro bloque se mostrara temas relacionados y una lista debajo-->
+							Datos de Contacto
+						</h3>
+						<ul> <!-- lista-->
+							<li>
+								kev.mgsilva@gmail.com
+							</li>
+							<li><!-- hay que escribir li para poder generar los puntitos o guin de las listas-->
+								+56991741982
+							</li>
+							<li><!-- hay que escribir li para poder generar los puntitos o guin de las listas-->
+								Caleta Arrayan 1106, Puente Alto<br>Santiago de Chile.
+							</li> <!-- br es una etiqueta de breack, para hacer salto de linea-->
+						</ul>
+					</div>
+					<div class="columna columna-25 columna-mobile-100"> <!-- como seran 4 bloques cada uno ocupa el 25% del espacio-->
+						<h3> <!-- en el otro bloque se mostrara temas relacionados y una lista debajo-->
+							Redes Sociales
+						</h3>
+						<ul class="redes"> <!-- lista, clase redes para stilarla-->
+							<li><!-- hay que escribir li para poder generar los puntitos o guin de las listas-->
+								<a href="#">
+									<i><i class="fab fa-facebook-square"></i></i> <!--se saca el icono de fontawesome.com-->
+								</a> <!-- etiqueta i le da inclinacion e insertar iconos-->
+							</li>
+							<li><!-- hay que escribir li para poder generar los puntitos o guin de las listas-->
+								<a href="#">
+									<i><i class="fab fa-instagram"></i></i> <!--se saca el icono de fontawesome.com-->
+								</a>
+							</li>
+							<li><!-- hay que escribir li para poder generar los puntitos o guin de las listas-->
+								<a href="#">
+									<i><i class="fab fa-twitter-square"></i></i> <!--se saca el icono de fontawesome.com-->
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div> <!-- espacio para derechos reservados -->
+			<div class="barra-footer"> <!-- este barrafooter tendra el icono de derechos reservados-->
+				&copy; Derechos Reservados - 2021
+			</div>
+		</footer>
+
+	</body>
+</html>
